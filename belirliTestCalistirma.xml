@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="belirli classlar">
+    <test name="class calsitirma">
+        <classes>
+            <class name="tests.S2">
+                <methods>
+                    <include name="amazonYazisi"></include>
+                </methods>
+            </class>
+            <class name="tests.S1">
+                <methods>
+                    <include name="test2"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

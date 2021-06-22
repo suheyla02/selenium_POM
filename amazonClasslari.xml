@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="amazon classlari">
+   <test name="class calistirma">
+       <classes>
+           <class name="tests.S1"></class>
+           <class name="tests.S2"></class>
+           <class name="tests.D22_ReusableMethodsWeblist"></class>
+       </classes>
+   </test>
+</suite>
