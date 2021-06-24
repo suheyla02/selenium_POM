@@ -10,7 +10,7 @@ import utilities.ReusableMethods;
 
 import java.util.List;
 
-public class S2 {
+public class D23_HomeworkSatirSayisi {
     /*
     ➢ AmazonPage sayfasinda istedigim satir ve sutun sayisi ile cagirdigimda bana
 hucredeki yaziyi getirecek bir method olusturun

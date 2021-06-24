@@ -2,12 +2,12 @@
 <suite name="belirli classlar">
     <test name="class calsitirma">
         <classes>
-            <class name="tests.S2">
+            <class name="tests.D23_HomeworkSatirSayisi">
                 <methods>
                     <include name="amazonYazisi"></include>
                 </methods>
             </class>
-            <class name="tests.S1">
+            <class name="tests.D23_HomeworkAmazon">
                 <methods>
                     <include name="test2"></include>
                 </methods>

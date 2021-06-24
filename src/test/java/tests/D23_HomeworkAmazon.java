@@ -10,7 +10,7 @@ import utilities.ReusableMethods;
 
 import java.util.List;
 
-public class S1 {
+public class D23_HomeworkAmazon {
     /*
 
 ➢ Amazon anasayfaya gidebilecek sekilde bir page sayfasi olusturun : AmazonPage
