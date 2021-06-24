@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="coklu class calistirma">
+    <test name="coklu calistirma testi">
+        <classes>
+            <class name="tests.D23_HomeworkSatirSaysi"></class>
+            <class name="tests.D23_HomeworkAmazon"></class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="sirali method calistirma" parallel="methods" thread-count="2">
+
+    <!--paralel calisma asagida secilen dosyalarla hic ilggilenmez,
+    sectigimiz tum package/class veya methodlari belirleyecegimiz
+    SEVIYEDE paralel olarak calsitirir-->
+
+    <test name="sirali method">
+        <classes>
+            <class name="tests.D23_HomeworkSatirSaysi">
+                <methods>
+                    <exclude name="sutunSayisi"></exclude>
+                </methods>
+            </class>
+            <class name="tests.D23_HomeworkAmazon">
+                <methods>
+                    <include name="amazonYazisi"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

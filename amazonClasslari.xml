@@ -2,8 +2,8 @@
 <suite name="amazon classlari">
    <test name="class calistirma">
        <classes>
+           <class name="tests.D23_HomeworkSatirSaysi"></class>
            <class name="tests.D23_HomeworkAmazon"></class>
-           <class name="tests.D23_HomeworkSatirSayisi"></class>
            <class name="tests.D22_ReusableMethodsWeblist"></class>
        </classes>
    </test>

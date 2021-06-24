@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="paralel calisma paket" parallel="classes" thread-count="3" verbose="5">
+    <!--verbose execeution sonrasi consolda yazdirilan aciklamalarin daha uzun veya kisa olmasini belirler
+    1 ile 10 arasinda bir deger alabilir
+    1 en az aciklama
+    10 en cok aciklama demektir-->
+   <packages>
+       <package name="smokeTest"></package>
+       <package name="tests"></package>
+   </packages>
+</suite>

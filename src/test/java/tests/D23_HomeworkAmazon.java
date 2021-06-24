@@ -12,38 +12,42 @@ import java.util.List;
 
 public class D23_HomeworkAmazon {
     /*
+    ➢ AmazonPage sayfasinda istedigim satir ve sutun sayisi ile cagirdigimda bana
+hucredeki yaziyi getirecek bir method olusturun
 
-➢ Amazon anasayfaya gidebilecek sekilde bir page sayfasi olusturun : AmazonPage
+➢ Tests paketi altinda yeni bir class olusturun: D26_AmazonHucreTesti
 
-➢ Amazon ana sayfasinda en altta bulunan Webtable’i inceleyebilmek icin AmazonPage
-clasinda en altta gitme isini yapacak bir method olusturun
+➢ Bu class’in altinda bir test method olusturun : hucretesti() ve webtable’da 3. satir
+2.sutundaki yazinin “Home Services” yazisi icerdigini test edin
 
-➢ Tests paketi altinda yeni bir class olusturun: D26_AmazonSatirSutunSayisi
-
-➢ Bu class’in altinda bir test method olusturun : satirSayisi() ve webtable’da 10 satir
-oldugunu test edin
-
-➢ Yeni bir method olusturun : sutunSayisi() ve yazi olan sutun sayisinin 7oldugunu test
-edin
+➢ Yeni bir method olusturun : AmazonYazisi() ve tabloda 9 Hucrede “Amazon” yazisi
+bulundugunu test edin
      */
 
     @Test
-    public void test(){
+    public void test() {
         Driver.getDriver().get(ConfigReader.getProperty("amazon_url"));
-        AmazonPage amazonPage=new AmazonPage();
-        List<WebElement> satir=amazonPage.satirWebElementi;
-        int satirSayisi=ReusableMethods.getElementsText(satir).size();
-        Assert.assertEquals(satirSayisi,9);
-
+        AmazonPage amazonPage = new AmazonPage();
+        ReusableMethods.waitFor(5);
+        String actualHome = amazonPage.hucreBul(3, 7);
+        Assert.assertTrue(actualHome.contains("Home Services"));
     }
     @Test
-    public void test2(){
+    public void amazonYazisi(){
         Driver.getDriver().get(ConfigReader.getProperty("amazon_url"));
         AmazonPage amazonPage=new AmazonPage();
-        int sutun=amazonPage.sutunSayisi.size();
-        Assert.assertEquals(sutun,7);
-        Driver.closeDriver();
-    }
+       List<WebElement> tumData= amazonPage.tumDataWebElementList;
+       int count=0;
+        for(WebElement w:tumData){
+          if(  w.getText().contains("Amazon")){
+              count++;
+          }
+        }
+        System.out.println(count);
+        Assert.assertEquals(count,10);
 
+
+ Driver.closeDriver();
+    }
 
 }
